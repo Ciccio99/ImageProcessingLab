@@ -44,13 +44,38 @@ ImageLoop::ImageLoop(istream &is) :
         _imageProcessor.DisplayLoadedImage();
     };
     _commands["applyMeanFilter"] = [this]() {
-        _imageProcessor.ApplyMeanFilter();
+        unsigned int size{0};
+        cout << "Kernel Size: ";
+        _in >> size;
+        _in.ignore();
+        if (size % 2 == 0 || size < 3) {
+            cout << "Error: Kernel size must be an odd number starting at 3" << endl;
+            return;
+        }
+        _imageProcessor.ApplyMeanFilter(size);
     };
     _commands["applyGausFilter"] = [this]() {
-        _imageProcessor.ApplyGuassianFilter();
-    };
-    _commands["applyCustomFilter"] = []() {
+        unsigned int size{0};
+        float sigma{0};
+        cout << "Kernel Size: ";
+        _in >> size;
+        _in.ignore();
+        if (size % 2 == 0 || size < 3) {
+            cout << "Error: Kernel size must be an odd number starting at 3" << endl;
+            return;
+        }
+        cout << "Sigma: ";
+        _in >> sigma;
+        _in.ignore();
+        if (sigma <= 0) {
+            cout << "Error: Sigma must be greater than 0" << endl;
+            return;
+        }
 
+        _imageProcessor.ApplyGuassianFilter(size, sigma);
+    };
+    _commands["applyCustomFilter"] = [this]() {
+        _imageProcessor.ApplyCustomFilter();
     };
 }
 
