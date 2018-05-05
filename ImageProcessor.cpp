@@ -74,6 +74,7 @@ void ImageProcessor::ApplyGuassianFilter(unsigned int size, float sigma) {
 
     // Make a zeroed out matrix/image of the same dimensions as the loaded image
     cv::Mat modifiedImage = cv::Mat::ones(_loadedImage.rows, _loadedImage.cols, _loadedImage.type());
+
     // Gaussian filter
     for (int r = gausKernel.anchor.x; r < _loadedImage.rows - gausKernel.anchor.x; ++r) {
         for (int c = gausKernel.anchor.y; c < _loadedImage.cols - gausKernel.anchor.y; ++c) {

@@ -27,8 +27,8 @@ ImageLoop::ImageLoop(istream &is) :
                 "readImage: Read in the path to an image\n"
                 "displayImage: Displays the currently loaded image\n"
                 "applyMeanFilter: Displays a copy of the loaded image with a mean filter applied\n"
-                "applyGausFilter: Displays a copy of the loaded image with a guassian filter applied\n"
-                "applyCustomFilter: Displays a copy of the loaded image with a customer made filter applied"
+                "applyGausFilter: Displays a copy of the loaded image with a gaussian filter applied\n"
+                "applyCustomFilter: Displays a copy of the loaded image with a custom made filter applied"
                 "help: display this help message\n"
                 "quit: exit the program"<< endl;
     };
