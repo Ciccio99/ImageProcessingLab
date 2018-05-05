@@ -9,15 +9,17 @@ Local Mean Filter, a Gaussian Filter, and a custom made filter to the images.
 
 ## Installing OpenCV Instructions
 WARNING: These instruction are for Unix based systems
+
 ```
 mkdir OpenCV_Install && cd OpenCV_Install
-// Github clone here
+git clone https://github.com/opencv/opencv.git
 cd opencv
-mkdir build && cs build
+mkdir build && cd build
 cmake - G "Unix Makefiles"
-make -j8 //j# represents the number of cores
+make -j8 //j# represents the number of cores (skip the flag to run openCV on a single core)
 sudo make install
 ```
+
 After the install is done you may need to logout/restart to create the symlinks
 Once restarted, openCV should be ready to go!
 
