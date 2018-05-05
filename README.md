@@ -75,5 +75,6 @@ The ones used in this program include:
 ## Example of Finished Lab
 ### Click this to watch the video on youtube
 (The video is also in the repository so that it can be viewed locally)
+
 [![Watch the video](https://i.ytimg.com/vi/NoZvNBT5DFo/hqdefault.jpg?sqp=-oaymwEXCNACELwBSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLDEBXZtP_Whj3CbGX7AFJ0ETS1-wA)](https://youtu.be/NoZvNBT5DFo)
 
